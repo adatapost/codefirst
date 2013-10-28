@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (var session in Model)
+{
+     <p>
+         @session.SessionID  @session.Title
+     </p>
+    
+    <p><strong>Abstract:</strong></p>
+    <p>@session.Abstract</p>
+    
+    <p><em>Venue : @session.Venue</em></p>
+    <hr />
+    <p>
+        Speaker: @session.Speaker.Name - @session.Speaker.EmailAddress
+    </p>
+}
